@@ -8,7 +8,19 @@
  * Controller of the raizenApp
  */
 angular.module('raizenApp')
-  .controller('HomeCtrl', function ($scope, $rootScope) {
+  .controller('HomeCtrl', function ($scope, $rootScope, $http) {
     $rootScope.body_class = 'page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo';
     $rootScope.dashboard_active = true;
+    $scope.loading_data = true;
+    $http.get('http://localhost:8000/today_session_counter').success(function(data){
+    	var today_info = angular.fromJson(data)
+    	$scope.session_counter = today_info.session_counter; 
+    	$scope.page_counter = today_info.page_counter;
+    	var today_timedelta = parseInt(today_info.timedelta_avg);
+    	var s = ( today_timedelta % 60 ).toString();
+    	var m = ( parseInt( (today_timedelta % 3600) / 60 ) ).toString();
+    	var h = ( parseInt( today_timedelta / 3600 ) ).toString();
+    	$scope.timedelta_avg = h+"h"+m+"m"+s+"s";
+    	$scope.loading_data = false;
+    });
   });
