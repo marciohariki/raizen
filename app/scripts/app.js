@@ -27,6 +27,10 @@ angular
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
+      .when('/user_statistics', {
+        templateUrl: 'views/statistics.html',
+        controller: 'UserStatisticsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

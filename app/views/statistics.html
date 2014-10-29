@@ -22,21 +22,24 @@
     <!-- /.modal -->
     <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
     <!-- BEGIN PAGE HEADER-->
+
     <h3 class="page-title">Estatística de Usuários</h3>
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
                 <i class="fa fa-home"></i>
-                <a href="/index">Dashboard</a>
+                <a href="#/index">Dashboard</a>
                 <i class="fa fa-angle-right"></i>
             </li>
             <li>
-                <a href="/index">Estatística de Usuários</a>
+                <a href="#/user_statistics">Estatística de Usuários</a>
             </li>
         </ul>
     </div>
     <!-- BEGIN SAMPLE TABLE PORTLET-->
-    <div class="portlet box red">
+
+    <i class="fa fa-spin fa-spinner" ng-show="loading_data" ng-cloak></i>
+    <div class="portlet box red" ng-hide="loading_data" >
         <div class="portlet-title">
             <div class="caption">
                 <i class="fa fa-cogs"></i>Estatísticas dos Usuários
@@ -73,18 +76,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="user in users_list">
+                    <tr ng-repeat="user in users_list"  on-last-repeat>
                         <td>
-                            {{index}}
+                            {{$index + 1}}
                         </td>
                         <td>
-                            {{user.counter}}
+                            {{user.fields.counter}}
                         </td>
                         <td>
-                            {{user.time_list }}
+                            {{user.fields.page_time}}
                         </td>
                         <td>
-                            {{user.url_list}}
+                            {{user.fields.most_viewed}}
                         </td>
                     </tr>
                 </tbody>
