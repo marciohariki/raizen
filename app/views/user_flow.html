@@ -1,0 +1,242 @@
+<div class="page-content user-flow">
+    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                     Widget settings form goes here
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn blue">Save changes</button>
+                    <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+    <!-- BEGIN PAGE HEADER-->
+    <h3 class="page-title">Fluxo do Usuário</h3>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/home">Dashboard</a>
+            </li>
+        </ul>
+    </div>
+    <!-- END PAGE HEADER-->
+    <i class="fa fa-spin fa-spinner" ng-show="loading_data" ng-cloak></i>
+    <i class="fa fa-arrow-left" ng-show="flow_column"></i>
+    <i class="fa fa-arrow-right" ng-show="flow_column"></i>
+    <div class="row user-flow-container" ng-hide="loading_data" ng-cloak>
+        <div class="flow-column">
+            <div class="step-box">
+                <p class="visits-info"> 113.345 visitas </p>
+                <div class="page-box">
+                    <p>Página: <strong>/</strong></p>
+                </div>
+            </div>
+            <div class="flow-column-prev" ng-show="flow_column">
+                <div class="step-box" ng-click="activeStep()">
+                    <p class="visits-info"> 8.370 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7229</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 29% - 2.431 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/profile/my_courses</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 34% - 850 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects/5</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 37% - 316 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5344</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 34% - 104 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5344</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-1" ng-show="flow_column">
+                <div class="step-box" ng-click="activeStep()">
+                    <p class="visits-info"> 31% - 35.910 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 43% - 15.431 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects/5</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 53% - 8.217 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5343</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 53% - 4.417 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5344</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-next" ng-show="flow_column">
+                <div class="step-box" ng-click="activeStep()">
+                    <p class="visits-info"> 31% - 13.638 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7523</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 33% - 4.456 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7524</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 70% - 3.111 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/universities</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 39% - 1.217 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/universities/3</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 82% - 1.002 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7865</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-4" ng-hide="flow_column">
+                <div class="step-box">
+                    <p class="visits-info"> 31% - 35.910 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 43% - 15.431 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects/5</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 53% - 8.217 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5343</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 53% - 4.417 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/5344</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-4" ng-hide="flow_column">
+                <div class="step-box">
+                    <p class="visits-info"> 12% - 13.424 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/profile/my_courses</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 64% - 8.613 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/subjects</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 47% - 4.132 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7544</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 15% - 613 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7545/</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-4" ng-hide="flow_column">
+                <div class="step-box">
+                    <p class="visits-info"> 7% - 8.413 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/signup/1</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 94% - 7.941 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/signup/2</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 91% - 7.274 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/signup/3</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 94% - 6.841 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/signup/4</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flow-column-4" ng-hide="flow_column">
+                <div class="step-box">
+                    <p class="visits-info"> 4% - 4.981 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/browse/certified</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 46% - 2.333 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7632</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 39% - 918 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7633</strong></p>
+                    </div>
+                </div>
+                <div class="step-box">
+                    <p class="visits-info"> 43% - 421 visitas </p>
+                    <div class="page-box">
+                        <p>Página: <strong>/play/7634</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

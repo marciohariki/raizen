@@ -230,7 +230,6 @@ var Index = function () {
                 ['10/2013', 4600]
             ];
 
-
             if ($('#site_statistics').size() != 0) {
 
                 $('#site_statistics_loading').hide();

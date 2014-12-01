@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="favicon.ico"/>
     <!-- END CUSTOM CSS -->
+    <base href="/">
   </head>
   <body ng-app="raizenApp" ng-class="body_class">
     <!--[if lt IE 7]>
@@ -220,6 +221,11 @@
                         Estatisticas de Usuários
                       </a>
                     </li>
+                    <li>
+                      <a href="#/map_site">
+                        Mapa do site
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -285,6 +291,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
+    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
     <!-- endbuild -->
 
     <!-- CUSTOM JS -->
@@ -321,20 +328,20 @@
       
       // QuickSidebar.init() // init quick sidebar
       Index.init();   
-      Index.initDashboardDaterange();
-      Index.initJQVMAP(); // init index page's custom scripts
-      Index.initCalendar(); // init index page's custom scripts
+      // Index.initDashboardDaterange();
+      // Index.initJQVMAP(); // init index page's custom scripts
+      // Index.initCalendar(); // init index page's custom scripts
       Index.initCharts(); // init index page's custom scripts
-      Index.initChat();
-      Index.initMiniCharts();
-      Index.initIntro();
+      // Index.initChat();
+      // Index.initMiniCharts();
+      // Index.initIntro();
       Tasks.initDashboardWidget();
       
     });
     </script>
     <script ng-if="!dashboard_active">
       jQuery(document).ready(function() {     
-        Login.init();s
+        Login.init();
          $.backstretch([
           "/components/admin/pages/media/bg/1.jpg",
           "/components/admin/pages/media/bg/2.jpg",
@@ -354,6 +361,8 @@
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/analytics.js"></script>
+        <script src="scripts/controllers/mapsite.js"></script>
+        <script src="scripts/controllers/user_flow.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -23,16 +23,16 @@
     <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
     <!-- BEGIN PAGE HEADER-->
 
-    <h3 class="page-title">Estatística de Usuários</h3>
+    <h3 class="page-title">Páginas</h3>
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
                 <i class="fa fa-home"></i>
-                <a href="#/index">Dashboard</a>
+                <a href="#/index">Home</a>
                 <i class="fa fa-angle-right"></i>
             </li>
             <li>
-                <a href="#/user_statistics">Estatística de Usuários</a>
+                <a href="#/user_statistics">Páginas</a>
             </li>
         </ul>
     </div>
@@ -42,7 +42,7 @@
     <div class="portlet box red" ng-hide="loading_data" >
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Estatísticas dos Usuários
+                <i class="fa fa-cogs"></i>Dados das Páginas
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse">
@@ -58,36 +58,36 @@
 
         <div class="portlet-body">
             <div class="table-responsive">
-                <table class="table" id="user_statistics_table">
+                <table class="table" id="pages_table">
                 <thead>
                 <tr>
                     <th>
                         #
                     </th>
                     <th>
-                        Quantidade de páginas acessadas
+                        Página
                     </th>
                     <th>
-                        Tempo de página (min)
+                        Visitas
                     </th>
                     <th>
-                        Página mais visitada
+                        Tempo na Página
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="user in users_list"  ng-if="$index != 1539" on-last-repeat>
+                    <tr ng-repeat="page in pages_list" on-last-repeat>
                         <td>
                             {{$index + 1}}
                         </td>
                         <td>
-                            {{user.fields.counter}}
+                            {{page.fields.page}}
                         </td>
                         <td>
-                            {{user.fields.page_time}}
+                            {{page.fields.counter}}
                         </td>
                         <td>
-                            {{user.fields.most_viewed}}
+                            {{page.fields.page_time}}
                         </td>
                     </tr>
                 </tbody>

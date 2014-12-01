@@ -87,13 +87,30 @@
             </div>
             <div class="details">
                 <div class="number">
-                        20%
+                    {{page_avg}}
                 </div>
                 <div class="desc">
-                    Usuários reincidentes
+                    Média de página acessadas
                 </div>
             </div>
             </a>
         </div>
     </div>
+
+    <div class="row" ng-hide="loading_data">
+
+        <div class="portlet light ">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-bar-chart font-green-sharp hide"></i>
+                    <span class="caption-subject font-green-sharp bold uppercase">Visitas durante a última semana</span>
+                </div>
+                
+            </div>
+            <div class="portlet-body">
+                <div google-chart chart="chartObject" style="padding:0;width:100%"></div>
+            </div>
+        </div>
+    </div>
+
 </div>
